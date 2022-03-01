@@ -12,8 +12,8 @@ Run the Ubuntu application and finish the basic configuration.
 
 In the ubuntu console run the following commands:
 ~~~
-$ sudo apt-get update -y
-$ sudo apt-get upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
 ~~~
 
 ## 3. Add the stable channel repository
@@ -21,7 +21,7 @@ $ sudo apt-get upgrade -y
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ~~~
 
 ## 4. add docker key to ubuntu
@@ -29,8 +29,8 @@ $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ub
 In the ubuntu console run the following commands:
 
 ~~~
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$ sudo apt-get update -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-get update -y
 ~~~
 
 ## 5. Install the latest Docker CE
@@ -38,7 +38,7 @@ $ sudo apt-get update -y
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo apt-get install -y docker-ce
+sudo apt-get install -y docker-ce
 ~~~
 
 ## 6. Add user to docker group to run docker using non root user.
@@ -46,7 +46,7 @@ $ sudo apt-get install -y docker-ce
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo usermod -aG docker $USER && newgrp docker
+sudo usermod -aG docker $USER && newgrp docker
 ~~~
 
 ## 7. Check version
@@ -54,7 +54,7 @@ $ sudo usermod -aG docker $USER && newgrp docker
 In the ubuntu console run the following commands:
 
 ~~~
-$ docker --version
+docker --version
 ~~~
 
 If no error appears, docker must be turned on and configured in this step.
@@ -64,7 +64,7 @@ If no error appears, docker must be turned on and configured in this step.
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo dockerd
+sudo dockerd
 ~~~
 
 ## 9. (optional) Configure Docker to start on boot
@@ -72,7 +72,7 @@ $ sudo dockerd
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo systemctl enable docker.service
+sudo systemctl enable docker.service
 ~~~
 
 ## 10. (optional) TO disable this use below command:
@@ -80,7 +80,7 @@ $ sudo systemctl enable docker.service
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo systemctl disable docker.service
+sudo systemctl disable docker.service
 ~~~
 
 # Install containerd.io
@@ -90,7 +90,7 @@ $ sudo systemctl disable docker.service
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo apt-get install -y containerd.io
+sudo apt-get install -y containerd.io
 ~~~
 
 ## 2.(optional) Configure containerd.io to start on boot
@@ -98,7 +98,7 @@ $ sudo apt-get install -y containerd.io
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo systemctl enable containerd.service
+sudo systemctl enable containerd.service
 ~~~
 
 ## 3.(optional)  To disable this use below command:
@@ -106,7 +106,7 @@ $ sudo systemctl enable containerd.service
 In the ubuntu console run the following commands:
 
 ~~~
-$ sudo systemctl disable containerd.service
+sudo systemctl disable containerd.service
 ~~~
 
 # Install Docker Compose
@@ -115,28 +115,28 @@ $ sudo systemctl disable containerd.service
 
 In the Windows terminal run the following commands:
 ~~~
-$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ~~~
 
 ## 2. Create symbolic link for easy execution
 
 In the Windows terminal run the following commands:
 ~~~
-$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ~~~
 
 ## 3. Assign execute permissions
 
 In the Windows terminal run the following commands:
 ~~~
-$ sudo chmod +x /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 ~~~
 
 ## 4. Check Docker Compose version
 
 In the Windows terminal run the following commands:
 ~~~
-$ docker-compose --version
+docker-compose --version
 ~~~
 
 # Basic Help Commands:
@@ -145,21 +145,21 @@ $ docker-compose --version
 
 In the Windows terminal run the following commands:
 ~~~
-$ wsl -l -v
+wsl -l -v
 ~~~
 
 ## 2. Run and connect Ubuntu
 
 In the Windows terminal run the following commands:
 ~~~
-$ wsl
+wsl
 ~~~
 
 ## 3. Exit Ubuntu console
 
 In the ubuntu console run the following commands:
 ~~~
-$ exit
+exit
 ~~~
 
 ## 4. Run docker with WSL
@@ -167,7 +167,7 @@ $ exit
 In the Windows terminal run the following commands:
 
 ~~~
-$ wsl sudo service docker start
+wsl sudo service docker start
 ~~~
 
 ## 5. Check docker version
@@ -175,7 +175,7 @@ $ wsl sudo service docker start
 In the Windows terminal run the following commands:
 
 ~~~
-$ wsl docker version
+wsl docker version
 ~~~
 
 ## 6. List images docker
@@ -183,7 +183,7 @@ $ wsl docker version
 In the Windows terminal run the following commands:
 
 ~~~
-$ wsl docker image ls
+wsl docker image ls
 ~~~
 
 ## 7. List containers run
@@ -191,7 +191,7 @@ $ wsl docker image ls
 In the Windows terminal run the following commands:
 
 ~~~
-$ wsl docker ps
+wsl docker ps
 ~~~
 
 ## 8. List all containers
@@ -199,7 +199,7 @@ $ wsl docker ps
 In the Windows terminal run the following commands:
 
 ~~~
-$ wsl docker ps -a
+wsl docker ps -a
 ~~~
 
 ## 9. Shutdown Containers
@@ -207,19 +207,26 @@ $ wsl docker ps -a
 In the Windows terminal run the following commands:
 
 ~~~
-$ wsl docker stop ___ID CONTAINER or NAME___
+wsl docker stop ___ID CONTAINER or NAME___
 ~~~
 
 ## 10. Delete Container
 
 In the Windows terminal run the following commands:
 ~~~
-$ wsl docker rm ___ID CONTAINER or NAME___
+wsl docker rm ___ID CONTAINER or NAME___
 ~~~
 
 ## 11. Run docker compose File
 
 To run a docker compose file, start windows terminal in the file's containing folder and then run the following command.
 ~~~
-$ wsl docker-compose up -d
+wsl docker-compose up -d
+~~~
+
+## 12. Connect to container
+
+To run a docker compose file, start windows terminal in the file's containing folder and then run the following command.
+~~~
+wsl docker container attach my_docker_image
 ~~~
