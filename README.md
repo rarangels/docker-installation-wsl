@@ -10,15 +10,17 @@ Run the Ubuntu application and finish the basic configuration.
 
 ## 3. Update and Upgrade packages
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 ~~~
 sudo apt-get update -y
+~~~
+~~~
 sudo apt-get upgrade -y
 ~~~
 
 ## 3. Add the stable channel repository
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -26,16 +28,18 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 
 ## 4. add docker key to ubuntu
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+~~~
+~~~
 sudo apt-get update -y
 ~~~
 
 ## 5. Install the latest Docker CE
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo apt-get install -y docker-ce
@@ -43,7 +47,7 @@ sudo apt-get install -y docker-ce
 
 ## 6. Add user to docker group to run docker using non root user.
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo usermod -aG docker $USER && newgrp docker
@@ -51,7 +55,7 @@ sudo usermod -aG docker $USER && newgrp docker
 
 ## 7. Check version
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 docker --version
@@ -61,7 +65,7 @@ If no error appears, docker must be turned on and configured in this step.
 
 ## 8. (optional) Run docker daemon:
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo dockerd
@@ -69,7 +73,7 @@ sudo dockerd
 
 ## 9. (optional) Configure Docker to start on boot
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo systemctl enable docker.service
@@ -77,7 +81,7 @@ sudo systemctl enable docker.service
 
 ## 10. (optional) TO disable this use below command:
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo systemctl disable docker.service
@@ -87,7 +91,7 @@ sudo systemctl disable docker.service
 
 ## 1. Install containerd.io
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo apt-get install -y containerd.io
@@ -95,7 +99,7 @@ sudo apt-get install -y containerd.io
 
 ## 2.(optional) Configure containerd.io to start on boot
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo systemctl enable containerd.service
@@ -103,7 +107,7 @@ sudo systemctl enable containerd.service
 
 ## 3.(optional)  To disable this use below command:
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 
 ~~~
 sudo systemctl disable containerd.service
@@ -113,28 +117,28 @@ sudo systemctl disable containerd.service
 
 ## 1. Install Docker Compose
 
-In the Windows terminal run the following commands:
+In the Ubuntu Console run the following commands:
 ~~~
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ~~~
 
 ## 2. Create symbolic link for easy execution
 
-In the Windows terminal run the following commands:
+In the Ubuntu Console run the following commands:
 ~~~
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ~~~
 
 ## 3. Assign execute permissions
 
-In the Windows terminal run the following commands:
+In the Ubuntu Console run the following commands:
 ~~~
 sudo chmod +x /usr/local/bin/docker-compose
 ~~~
 
 ## 4. Check Docker Compose version
 
-In the Windows terminal run the following commands:
+In the Ubuntu Console run the following commands:
 ~~~
 docker-compose --version
 ~~~
@@ -155,9 +159,9 @@ In the Windows terminal run the following commands:
 wsl
 ~~~
 
-## 3. Exit Ubuntu console
+## 3. Exit Ubuntu Console
 
-In the ubuntu console run the following commands:
+In the Ubuntu Console run the following commands:
 ~~~
 exit
 ~~~
