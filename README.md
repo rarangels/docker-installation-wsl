@@ -234,3 +234,10 @@ To run a docker compose file, start windows terminal in the file's containing fo
 ~~~
 wsl docker container attach my_docker_image
 ~~~
+
+## 13. Delete all containers, images and volume verifying correct deletion
+
+To run a docker compose file, start windows terminal in the file's containing folder and then run the following command.
+~~~
+ wsl docker container rm $(wsl docker ps -a -q) --force | wsl docker image rm $(wsl docker images -q) | wsl docker volume prune | wsl docker ps -a | wsl docker images | wsl docker volume ls
+~~~
